@@ -1,5 +1,12 @@
 <?php
     include('../componentes/header.php');
+
+    require('../conexao.php');
+
+    $sql = "SELECT * FROM tbl_pessoa";
+
+    $resultado = mysqli_query($conexao, $sql);
+
 ?>
 
 <div class="container">
@@ -20,12 +27,18 @@
     </thead>
 
     <tbody>
+
+    <?php
+
+        while ($usuario = mysqli_fetch_array($resultado)) {
+
+    ?>
             <tr>
-                <th>1</th>
-                <th>TESTE DE NOME</th>
-                <th>TESTE DE SOBRENOME</th>
-                <th>TESTE DE EMAIL</th>
-                <th>TESTE DE CELULAR</th>
+                <th><?php echo $usuario["cod_pessoa"]?></th>
+                <th><?php echo $usuario["nome"]?></th>
+                <th><?php echo $usuario["sobrenome"]?></th>
+                <th><?php echo $usuario["email"]?></th>
+                <th><?php echo $usuario["celular"]?></th>
                 <th>
                     <button class="btn btn-warning">Editar</button>
 
@@ -36,6 +49,8 @@
                     
                 </th>
             </tr>
+
+        <?php } ?>
     </tbody>
 
     </table>
