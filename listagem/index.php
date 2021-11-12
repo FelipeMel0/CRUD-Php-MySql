@@ -41,7 +41,7 @@ $resultado = mysqli_query($conexao, $sql);
                     <th><?php echo $usuario["celular"] ?></th>
                     <th>
 
-                        <a href="editar.php?cod_pessoa=<?php echo $usuario['cod_pessoa']?>">EDITAR</a>   
+                        <a href="../cadastro/editar.php?cod_pessoa=<?php echo $usuario['cod_pessoa']?>">EDITAR</a>   
                         <a href="acoes.php?cod_pessoa=<?php echo $usuario['cod_pessoa'] . '&acao=deletar'?>">EXCLUIR</a>
                         
                     </th>

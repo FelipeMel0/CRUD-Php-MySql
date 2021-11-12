@@ -1,6 +1,8 @@
 <?php
 
     include('../componentes/header.php');
+    include('../conexao.php'); 
+    include('./acoes.php');
 
 ?>
 
@@ -24,14 +26,9 @@
                     <br />
                     <input class="form-control" type="text" placeholder="Digite celular" name="celular" id="celular">
                     <br />
-                    <!-- <button class="btn btn-success">CADASTRAR</button> -->
-                    <? ?>
-                    <a href="acoes.php?cod_pessoa=<?=$usuario['cod_pessoa'] . '&acao=inserir'?>">CADASTRAR</a>
-
+                    <button class="btn btn-success">CADASTRAR</button>
+                    
                 </form>
-
-            
-
             </div>
         </div>
     </div>
