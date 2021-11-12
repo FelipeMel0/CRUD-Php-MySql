@@ -30,6 +30,10 @@ $usuario = mysqli_fetch_array($resultado);
                 <br />
                 <button class="btn btn-success" name="editar">EDITAR</button>
             </form>
+            <br />
+            <form action="../listagem/index.php">
+                <button class="btn btn-success">VOLTAR</button>
+            </form>
         </div>
     </div>
 </div>
