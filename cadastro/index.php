@@ -26,7 +26,7 @@
                     <br />
                     <input class="form-control" type="text" placeholder="Digite celular" name="celular" id="celular">
                     <br />
-                    <button class="btn btn-success">CADASTRAR</button>
+                    <button class="btn btn-success" name="cadastrar" type="submit">CADASTRAR</button>
                     
                 </form>
             </div>
