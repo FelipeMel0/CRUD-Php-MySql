@@ -1,6 +1,6 @@
 <?php
 include('../componentes/header.php');
-include('../conexao.php');
+// include('../conexao.php');
 include('./acoes.php');
 
 $cod_pessoa = $_GET["cod_pessoa"];
