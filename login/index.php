@@ -1,4 +1,7 @@
 <?php
+
+    // session_start();
+
     include('../componentes/header.php');
 ?>
 
