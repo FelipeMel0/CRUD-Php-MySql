@@ -22,16 +22,44 @@ function realizarLogin($usuario, $senha, $conexao){
         $_SESSION["nome"] = $usuario;
         $_SESSION["senha"] = $senha;
 
-        // header("location: ../listagem/index.php");
-        echo "Deu certo";
+        header("location: ../listagem/index.php");
+        // echo "Deu certo";
     } 
     else {
-        // header("location: ../index.php");
-        echo "Não deu certo";
+        header("location: ../index.php");
+        // echo "Não deu certo";
     }
 }
 
-realizarLogin($usuario, $senha, $conexao);
+function finalizarLogin(){
+    session_unset(); //limpa todas as variáveis da sessão
+    session_destroy(); //destrói a sessão ativa
+
+    header("location: index.php");
+}
+
+if (isset($_POST['txt_usuario']) || isset($_POST['txt_senha'])) {
+
+    $usuario = $_POST['txt_usuario'];
+    $senha = $_POST['txt_senha'];
+
+    realizarLogin($usuario, $senha, $conexao);
+
+} else if($_GET["logout"]){
+
+    finalizarLogin();
+
+}
+
+// function verificarLogin(){
+
+//     if($_SESSION["id"] != session_id() || empty(session_id())){
+
+//         header("location: index.php");
+
+//     }
+
+// }
 
 // if (isset($_POST['logar'])) {
 
